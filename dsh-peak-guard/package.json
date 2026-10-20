@@ -1,0 +1,53 @@
+{
+  "name": "dsh-peak-guard",
+  "version": "0.2.0",
+  "description": "峰时守卫 (peak-guard): freeze thinking during DeepSeek peak-rate hours, resume on a word or when off-peak starts; a sidebar panel toggles it and edits the windows.",
+  "type": "module",
+  "main": "host.js",
+  "exports": {
+    ".": "./host.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "icon": "./icon.svg",
+  "files": [
+    "host.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek",
+    "harness",
+    "plugin",
+    "bundle",
+    "peak",
+    "off-peak",
+    "billing",
+    "rate-limit"
+  ],
+  "author": "dsh-peak-guard contributors",
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

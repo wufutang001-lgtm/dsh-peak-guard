@@ -1,0 +1,13 @@
+# dsh-peak-guard bundle patch: one host row that guards every agent turn.
+# The row name resolves from the profile's own node_modules.
+- insert:
+    - id: peak-guard
+      name: dsh-peak-guard
+      config:
+        enabled: true
+        autoResume: true
+        offsetMinutes: 480
+        windows:
+          - [9, 12]
+          - [14, 18]
+        holidays: []

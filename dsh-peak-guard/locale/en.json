@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Peak Guard",
+    "description": "Freezes thinking during DeepSeek peak-rate hours, resumes on a resume command or when off-peak starts. Master switch in Settings."
+  }
+}
